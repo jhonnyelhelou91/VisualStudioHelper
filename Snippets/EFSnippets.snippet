@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CodeSnippets xmlns="http://schemas.microsoft.com/VisualStudio/2005/CodeSnippet">
+    <CodeSnippet Format="1.0.0">
+        <Header>
+			<Title>DbSet Snippet</Title>
+			<Author>Jhonny El Helou</Author>
+			<Description>Create DbSet.</Description>
+			<Shortcut>dbset</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>Model</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+				   <Namespace>Microsoft.EntityFrameworkCore</Namespace>
+				</Import>
+			</Imports>
+            <Code Language="CSharp">
+                <![CDATA[public virtual DbSet<$classname$> : $classname$s { get; set; }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+    <CodeSnippet Format="1.0.0">
+        <Header>
+			<Title>DbSet Audit Snippet</Title>
+			<Author>Jhonny El Helou</Author>
+			<Description>Create Audit DbSet.</Description>
+			<Shortcut>auditdbset</Shortcut>
+			<SnippetTypes>
+				<SnippetType>Expansion</SnippetType>
+			</SnippetTypes>
+        </Header>
+        <Snippet>
+			<Declarations>
+				<Literal>
+					<ID>classname</ID>
+					<ToolTip>Class name</ToolTip>
+					<Default>Model</Default>
+				</Literal>
+			</Declarations>
+			<Imports>
+				<Import>
+				   <Namespace>Microsoft.EntityFrameworkCore</Namespace>
+				</Import>
+			</Imports>
+            <Code Language="CSharp">
+                <![CDATA[public virtual DbSet<$classname$Audit> : $classname$Audits { get; set; }]]>
+            </Code>
+        </Snippet>
+    </CodeSnippet>
+</CodeSnippets>
